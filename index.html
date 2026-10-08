@@ -121,7 +121,6 @@ const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 // links
 const set=(sel,u)=>$$(sel).forEach(a=>{if(u){a.href=u;a.target="_blank";a.rel="noopener";const e=a.querySelector("em");e&&e.remove();a.textContent=a.textContent.trim()}});
 set("#gh",LINKS.github);set("#lg",LINKS.linkedin);set("#fg",LINKS.github);set("#fl",LINKS.linkedin);
-if(LINKS.github)$$(".gh").forEach(a=>{a.href=LINKS.github;a.target="_blank";a.rel="noopener";a.textContent="GitHub"});
 // navbar
 const hd=$("#hd"),bg=$("#bg");
 const sc=()=>{hd.classList.toggle("s",scrollY>20);$("#bar").style.transform=`scaleX(${scrollY/(document.body.scrollHeight-innerHeight||1)})`};
